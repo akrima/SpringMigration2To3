@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.18</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.2.2</version>
+		<relativePath/>
 	</parent>
 	<groupId>com.akrima</groupId>
 	<artifactId>springmigration2To3</artifactId>
@@ -25,6 +25,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!-- Spring Boot provides a spring-boot-properties-migrator module.
+			Once added as a dependency to your project, this will not only analyze
+			your application’s environment and print diagnostics at startup,
+			but also temporarily migrate properties at runtime for you
+
+			FIXME once the migration is done we should remove it !!!!
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-properties-migrator</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 
